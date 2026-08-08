@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/space-rooms/static/css/main.bf97c144.css",
-    "main.js": "/space-rooms/static/js/main.e3d87018.js",
-    "static/js/453.703c6394.chunk.js": "/space-rooms/static/js/453.703c6394.chunk.js",
-    "index.html": "/space-rooms/index.html",
-    "main.bf97c144.css.map": "/space-rooms/static/css/main.bf97c144.css.map",
-    "main.e3d87018.js.map": "/space-rooms/static/js/main.e3d87018.js.map",
-    "453.703c6394.chunk.js.map": "/space-rooms/static/js/453.703c6394.chunk.js.map"
+    "main.css": "/Space-Rooms/static/css/main.bf97c144.css",
+    "main.js": "/Space-Rooms/static/js/main.351c3407.js",
+    "static/js/453.703c6394.chunk.js": "/Space-Rooms/static/js/453.703c6394.chunk.js",
+    "index.html": "/Space-Rooms/index.html",
+    "main.bf97c144.css.map": "/Space-Rooms/static/css/main.bf97c144.css.map",
+    "main.351c3407.js.map": "/Space-Rooms/static/js/main.351c3407.js.map",
+    "453.703c6394.chunk.js.map": "/Space-Rooms/static/js/453.703c6394.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf97c144.css",
-    "static/js/main.e3d87018.js"
+    "static/js/main.351c3407.js"
   ]
 }
