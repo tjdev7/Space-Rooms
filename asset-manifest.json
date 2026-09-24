@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Space-Rooms/static/css/main.bf97c144.css",
-    "main.js": "/Space-Rooms/static/js/main.351c3407.js",
+    "main.css": "/Space-Rooms/static/css/main.b627a568.css",
+    "main.js": "/Space-Rooms/static/js/main.6820fa34.js",
     "static/js/453.703c6394.chunk.js": "/Space-Rooms/static/js/453.703c6394.chunk.js",
     "index.html": "/Space-Rooms/index.html",
-    "main.bf97c144.css.map": "/Space-Rooms/static/css/main.bf97c144.css.map",
-    "main.351c3407.js.map": "/Space-Rooms/static/js/main.351c3407.js.map",
+    "main.b627a568.css.map": "/Space-Rooms/static/css/main.b627a568.css.map",
+    "main.6820fa34.js.map": "/Space-Rooms/static/js/main.6820fa34.js.map",
     "453.703c6394.chunk.js.map": "/Space-Rooms/static/js/453.703c6394.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf97c144.css",
-    "static/js/main.351c3407.js"
+    "static/css/main.b627a568.css",
+    "static/js/main.6820fa34.js"
   ]
 }
