@@ -1,12 +1,12 @@
-// App.js
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const initialRooms = [
-  { id: 1, name: 'Conference Hall', capacity: 20, image: 'https://picsum.photos/seed/confA/400/200' },
-  { id: 2, name: 'Power Meeting Room B', capacity: 6, image: 'https://picsum.photos/seed/meetB/400/200' },
-  { id: 3, name: 'Hanger Bay room', capacity: 8, image: 'https://picsum.photos/seed/boardC/400/200' },
-  { id: 4, name: 'Engineer Hub', capacity: 12, image: 'https://picsum.photos/seed/boardA/400/200' },
+  { id: 1, name: 'Conference Hall', capacity: 20, image: 'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=400&h=200&fit=crop' },
+  { id: 2, name: 'Meeting Room', capacity: 6, image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=400&h=200&fit=crop' },
+  { id: 3, name: 'Game Room', capacity: 8, image: 'https://images.unsplash.com/photo-1614005958937-82bcc9316a5b?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { id: 4, name: 'Engineer Hub', capacity: 12, image: 'https://plus.unsplash.com/premium_photo-1764691415779-1240207e7c51?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
 ];
 
 const initialBookings = [
@@ -21,7 +21,10 @@ const TIME_SLOTS = [
 
 function App() {
   const [rooms, setRooms] = useState(initialRooms);
-  const [bookings, setBookings] = useState(initialBookings);
+  const [bookings, setBookings] = useState(() => {
+    const saved = localStorage.getItem('bookings');
+    return saved ? JSON.parse(saved) : initialBookings;
+  });
   const [showModal, setShowModal] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [newBooking, setNewBooking] = useState({
@@ -93,10 +96,22 @@ function App() {
     return room ? room.name : 'Unknown';
   };
 
+  const handleReset = () => {
+    if (window.confirm('Clear all bookings and restore demo data?')) {
+      localStorage.removeItem('bookings');
+      setBookings(initialBookings);
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+  }, [bookings]);
+
   return (
     <div className="app">
       <header>
         <h1>🚀 Space Rooms 🚀 </h1>
+
       </header>
 
       <main>
@@ -115,7 +130,14 @@ function App() {
         </section>
 
         <section className="bookings-section">
-          <h2>Current Bookings</h2>
+          <div className="section-header">
+            <h2>Current Bookings</h2>
+            <button className="reset-btn" onClick={handleReset}>
+              ↺ Reset Demo Data
+            </button>
+          </div>
+
+
           {bookings.length === 0 ? (
             <p>No bookings yet.</p>
           ) : (
