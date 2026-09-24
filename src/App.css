@@ -1,4 +1,3 @@
-/* App.css */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,11 +33,12 @@ h2 {
   color: #2c3e50;
 }
 
-.rooms-section, .bookings-section {
+.rooms-section,
+.bookings-section {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
 
@@ -58,14 +58,14 @@ h2 {
   flex-direction: column;
 }
 
-/* 👇 NEW STYLES FOR THE ROOM IMAGES */
+
 .room-image {
   width: 100%;
   height: 150px;
-  object-fit: cover;        /* Ensures the image covers the area without distortion */
+  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 12px;
-  background-color: #e9ecef; /* Fallback color while loading */
+  background-color: #e9ecef;
 }
 
 .room-card h3 {
@@ -85,7 +85,7 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
-  margin-top: auto;         /* Pushes button to the bottom, keeping cards aligned */
+  margin-top: auto;
 }
 
 .room-card button:hover {
@@ -121,14 +121,14 @@ h2 {
   background: #c0392b;
 }
 
-/* Modal styles (unchanged) */
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +141,7 @@ h2 {
   border-radius: 8px;
   width: 400px;
   max-width: 90%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal h2 {
@@ -192,4 +192,43 @@ h2 {
 
 .modal-actions button[type="submit"]:hover {
   background: #1e8449;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  margin-bottom: 0;
+}
+
+
+.reset-btn {
+  background: transparent;
+  color: #7f8c8d;
+  border: 1px solid #d5dbdb;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  color: #ffffff;
+}
+
+.reset-btn:active {
+  transform: scale(0.97);
+}
+
+.reset-btn:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
 }
